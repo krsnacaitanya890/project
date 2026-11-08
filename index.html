@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antique Marketplace with Provenance Records</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Antique Marketplace</h1>
+    <p>Every item comes with its origin, ownership history, condition and authenticity record.</p>
+    <nav>
+      <a href="#listings">Browse antiques</a>
+      <a href="#how-it-works">How records work</a>
+      <a href="#contact">Ask a question</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="listings">
+      <h2>Browse antiques</h2>
+
+      <div class="filters">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Name, era or origin">
+
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="all">All categories</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Clocks">Clocks</option>
+          <option value="Ceramics">Ceramics</option>
+          <option value="Jewellery">Jewellery</option>
+          <option value="Art">Art</option>
+        </select>
+
+        <label for="verified">Authenticity</label>
+        <select id="verified">
+          <option value="all">Any status</option>
+          <option value="Verified">Verified</option>
+          <option value="Pending">Pending review</option>
+        </select>
+      </div>
+
+      <p id="result-count"></p>
+      <div id="item-list"></div>
+    </section>
+
+    <section id="record" hidden>
+      <h2>Provenance record</h2>
+      <div id="record-content"></div>
+      <button type="button" id="close-record">Close record</button>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How records work</h2>
+      <ul>
+        <li><strong>Origin:</strong> where and when the item was made, and by whom if known.</li>
+        <li><strong>Ownership history:</strong> the owners we can document, with dates and sources.</li>
+        <li><strong>Condition:</strong> repairs, restoration and wear, described by an inspector.</li>
+        <li><strong>Authenticity:</strong> the checks carried out and who carried them out.</li>
+      </ul>
+      <p>Gaps in a record are shown as gaps. We do not fill them in.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Ask about an item</h2>
+      <form id="contact-form">
+        <label for="name">Your name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="item-select">Item</label>
+        <select id="item-select"></select>
+
+        <label for="message">Your question</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Send question</button>
+      </form>
+      <p id="form-message" role="status"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Antique Marketplace. Sample website for learning purposes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
