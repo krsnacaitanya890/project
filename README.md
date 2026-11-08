@@ -1,0 +1,1 @@
+Buyers of antiques often need information about an item's origin, ownership history, condition, and authenticity before considering a purchase, you'll find in the repository the files needed for such website. 
